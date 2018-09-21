@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./stylesheet.css"> 
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <script>
+        function checknull() {
+            if (us.username.value==""||pa.password.value==""||au.autobot.value=="") 
+                alert("กรุณากรอกข้อมูลให้ครบ")
+            else
+                checklogin()
+        }
+
+        function checklogin() {
+            if (us.username.value=="admin"&&pa.password.value=="1234")
+                checkbot()
+            else
+                alert("Username or password incorrect")
+        }
+
+        function checkbot() {
+            if (au.autobot.value=="7711")
+                alert("Login success")
+            else
+                alert("autobot incorrect")
+        }
+    </script>
+
+    <section class="hero is-primary">
+        <div class="hero-body">
+        <div class="container">
+            <h1 class="title" align="center">Login</h1>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <form class="usname" name="us">
+            <div class="field"> 
+                <label class="label">Username</label>
+                <div class="control">   <input class="input" name="username" type="text" placeholder="">   </div>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <form class="pas" name="pa">
+            <div class="field"> 
+                <label class="label">Password</label>
+                <div class="control">   <input class="input" name="password" type="password" placeholder="">   </div>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <form class="aut" name="au">
+            <div class="field"> 
+                <label class="label">Autobot</label>
+                <div class="control has-right">
+                    <input class="input" name="autobot" type="text" placeholder="Fill Number                                                       7711">
+                    <span class="is-right">   
+                        <i class="1234"></i>
+                    </span>
+                </div>
+                <a href="forget.html">Forget Pasword?</a>
+            </div>
+            <button class="button is-primary" onclick="checknull()">Login</button>
+        </form>
+    </section>
+</body>
+</html>
